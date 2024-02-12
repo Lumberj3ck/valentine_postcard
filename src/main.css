@@ -75,9 +75,7 @@
 :root {
   --card-primary-color: #800080;
   --card-secondary-color: #cfffff;
-}
-.chatgpt_section{
-    background-color: #28044a;
-    color: #7cf278;
+  --section-primary-color: #28044a;
+  --section-secondary-color: #7cf278;
 }
 
