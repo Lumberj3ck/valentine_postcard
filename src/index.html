@@ -19,7 +19,12 @@
     <title>Valentine's day</title>
   </head>
   <body class="text-gray-800 antialiased">
-    <main>
+    <div id="start_screen">
+          <div class="heart">
+            <i class="fas fa-heart heart_animation text-7xl md:text-8xl lg:text-9xl"></i>
+          </div>
+    </div>
+    <main class="hidden">
       <div
         class="relative pt-16 pb-32 flex content-center items-center justify-center"
         style="min-height: 75vh"
@@ -638,7 +643,7 @@
         </div>
       </section>
     </main>
-    <footer class="relative bg-gray-300 pt-8 pb-6">
+    <footer class="relative bg-gray-300 pt-8 pb-6 hidden">
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
         style="height: 80px"
@@ -790,5 +795,14 @@
       document.getElementById(collapseID).classList.toggle("hidden");
       document.getElementById(collapseID).classList.toggle("block");
     }
+  </script>
+  <script>
+            document.querySelector('.heart').addEventListener('click', function() {
+            main_element = document.querySelector('body main') 
+            footer = document.querySelector('body footer') 
+            document.getElementById('start_screen').style.display = 'none';
+            main_element.classList.remove('hidden')
+            footer.classList.remove('hidden')
+        });
   </script>
 </html>
