@@ -79,3 +79,6 @@
   --section-secondary-color: #7cf278;
 }
 
+.text-section-color{
+  color: var(--section-secondary-color)
+}
