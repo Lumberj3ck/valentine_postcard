@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/output.css" />
     <!-- <link rel="stylesheet" href="./all.min.css" /> -->
     <link
       rel="apple-touch-icon"
@@ -71,14 +71,15 @@
           </svg>
         </div>
       </div>
-      <section class="pb-20  -mt-24">
+      <section class="pb-20 -mt-24">
         <div class="container mx-auto px-4">
+          <!-- cards -->
           <div class="flex flex-wrap">
             <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
               <div
-                class="pulse_custom relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-pink-600"
+                class="card pulse_custom relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-pink-600"
               >
-                <div class="px-4 py-5 flex-auto">
+                <div class="px-4 py-5 flex-auto card-face card-front">
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
                   >
@@ -92,15 +93,25 @@
                     A paragraph describing a feature will be enough.
                   </p>
                 </div>
+                <div class="absolute bottom-4 left-0 card-face card-back text-white px-4 py-4">
+                  <h6 class="text-xl font-semibold text-white">
+                    Awarded Agency
+                  </h6>
+                  <p class="mt-2 mb-4 text-white">
+                    Divide details about your product or agency work into parts.
+                    A paragraph describing a feature will be enough.
+                  </p>
+                </div>
               </div>
             </div>
+            <!-- first card -->
             <div class="w-full md:w-4/12 px-4 text-center">
               <div
-                class="pulse_custom relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-pink-600"
+                class="pulse_custom card relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-pink-600"
               >
-                <div class="px-4 py-5 flex-auto text-white">
+                <div class="px-4 py-5 flex-auto text-white card-face card-front">
                   <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full "
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full"
                   >
                     <i class="fas fa-bomb"></i>
                   </div>
@@ -110,13 +121,21 @@
                     Remember that by this time, the user is curious.
                   </p>
                 </div>
+                <div class="absolute bottom-4 left-0 card-face card-back text-white px-4 py-4">
+                  <h6 class="text-xl font-semibold">Free Revisions</h6>
+                  <p class="mt-2 mb-4">
+                    Keep you user engaged by providing meaningful information.
+                    Remember that by this time, the user is curious.
+                  </p>
+                  </div>
               </div>
             </div>
+            <!-- second card -->
             <div class="pt-6 w-full md:w-4/12 px-4 text-center">
               <div
-                class="pulse_custom relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-pink-600"
+                class="pulse_custom card relative flex flex-col min-w-0 break-words w-full mb-8 shadow-lg rounded-lg bg-pink-600"
               >
-                <div class="px-4 py-5 flex-auto">
+                <div class="px-4 py-5 flex-auto card-face card-front">
                   <div
                     class="p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
                   >
@@ -130,9 +149,19 @@
                     feature will be enough. Keep you user engaged!
                   </p>
                 </div>
+                <div class="absolute bottom-4 left-0 card-face card-back text-white px-4 py-4">
+                  <h6 class="text-xl text-white font-semibold">
+                    Verified Company
+                  </h6>
+                  <p class="mt-2 mb-4 text-white">
+                    Write a few lines about each one. A paragraph describing a
+                    feature will be enough. Keep you user engaged!
+                  </p>
+                  </div>
               </div>
             </div>
           </div>
+          <!-- cards -->
           <div class="flex flex-wrap items-center mt-32">
             <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
               <div
@@ -167,16 +196,16 @@
                 faster. You can change the text and images and you're good to
                 go. Just make sure you enable them first via JavaScript.
               </p>
-              <a
+              <!-- <a
                 href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
                 class="font-bold text-gray-800 mt-8"
                 >Check Tailwind Starter Kit!</a
-              >
+              > -->
             </div>
             <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
               <div
                 class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-600"
-                style="background-color: var(--card-primary-color);"
+                style="background-color: var(--card-primary-color)"
               >
                 <img
                   alt="..."
@@ -194,20 +223,18 @@
                     <polygon
                       points="-30,95 583,95 583,65"
                       class="text-pink-600 fill-current"
-                      style="color: var(--card-primary-color);"
+                      style="color: var(--card-primary-color)"
                     ></polygon>
                   </svg>
-                  <h4 class="text-xl font-bold text-white"
-                      style="
-                      color: var(--card-secondary-color);
-                      "
+                  <h4
+                    class="text-xl font-bold text-white"
+                    style="color: var(--card-secondary-color)"
                   >
                     Top Notch Services
                   </h4>
-                  <p class="text-md font-light mt-2 text-white"
-                      style="
-                      color: var(--card-secondary-color);
-                      "
+                  <p
+                    class="text-md font-light mt-2 text-white"
+                    style="color: var(--card-secondary-color)"
                   >
                     The Arctic Ocean freezes every winter and much of the
                     sea-ice then thaws every summer, and that process will
@@ -241,13 +268,14 @@
             ></polygon>
           </svg>
         </div>
-        <div class="container mx-auto px-4"
-              style="background-color: var(--section-primary-color)"
+        <div
+          class="container mx-auto px-4"
+          style="background-color: var(--section-primary-color)"
         >
-          <div class="items-center flex flex-wrap"
-          >
-            <div class="w-full md:w-4/12 ml-auto mr-auto px-4"
-          style="margin-top:50px; margin-bottom:50px"
+          <div class="items-center flex flex-wrap">
+            <div
+              class="w-full md:w-4/12 ml-auto mr-auto px-4"
+              style="margin-top: 50px; margin-bottom: 50px"
             >
               <img
                 alt="..."
@@ -256,21 +284,22 @@
               />
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12 mb-8 ">
+              <div class="md:pr-12 mb-8">
                 <div
                   class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
                 >
                   <i class="fas fa-rocket text-xl"></i>
                 </div>
-                <h3 class="text-3xl font-semibold text-section-color"
-                >A growing company</h3>
+                <h3 class="text-3xl font-semibold text-section-color">
+                  A growing company
+                </h3>
                 <p class="mt-4 text-lg leading-relaxed text-section-color">
                   The extension comes with three pre-built pages to help you get
                   started faster. You can change the text and images and you're
                   good to go.
                 </p>
                 <ul class="list-none mt-6">
-                  <li class="py-2 ">
+                  <li class="py-2">
                     <div class="flex items-center">
                       <div>
                         <span
@@ -294,7 +323,9 @@
                         ></span>
                       </div>
                       <div>
-                        <h4 class="text-section-color">Amazing page examples</h4>
+                        <h4 class="text-section-color">
+                          Amazing page examples
+                        </h4>
                       </div>
                     </div>
                   </li>
@@ -469,11 +500,6 @@
           </div>
         </div>
       </section>
-      <!-- <section>
-        <span class="pulse_custom">
-          Some content
-        </span>
-      </section> -->
       <section class="pb-20 relative block bg-gray-900">
         <div
           class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -759,6 +785,7 @@
       </div>
     </footer>
   </body>
+  <script src="./js/cards_flip.js"></script>
   <script>
     function toggleNavbar(collapseID) {
       document.getElementById(collapseID).classList.toggle("hidden");
