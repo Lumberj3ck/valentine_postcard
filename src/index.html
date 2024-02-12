@@ -798,19 +798,22 @@
     }
   </script>
   <script>
-            document.querySelector('.heart').addEventListener('click', function() {
-            main_element = document.querySelector('body main') 
-            footer = document.querySelector('body footer') 
-            document.querySelector('.heart').classList.toggle('puff_out_animation');
+          function handleClick() {
+            heart.removeEventListener('click', handleClick);
+            heart.classList.toggle('puff_out_animation');
             // document.querySelector('body').classList.toggle('puff_out_animation');
 
-              setTimeout(() => {
-                document.getElementById('start_screen').style.display = 'none';
-                main_element.classList.remove('hidden')
-                footer.classList.remove('hidden')
-                // document.querySelector('body').classList.toggle('puff_out_animation');
-              }, 700)
+            setTimeout(() => {
+              document.getElementById('start_screen').style.display = 'none';
+              main_element.classList.remove('hidden');
+              footer.classList.remove('hidden');
+            }, 600);
+          }
 
-        });
+          var heart = document.querySelector('.heart');
+          var main_element = document.querySelector('body main');
+          var footer = document.querySelector('body footer');
+
+          heart.addEventListener('click', handleClick);
   </script>
 </html>
