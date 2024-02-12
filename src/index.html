@@ -800,9 +800,14 @@
             document.querySelector('.heart').addEventListener('click', function() {
             main_element = document.querySelector('body main') 
             footer = document.querySelector('body footer') 
-            document.getElementById('start_screen').style.display = 'none';
-            main_element.classList.remove('hidden')
-            footer.classList.remove('hidden')
+            document.querySelector('.heart').classList.add('puff_out_animation');
+
+              setTimeout(() => {
+                document.getElementById('start_screen').style.display = 'none';
+                main_element.classList.remove('hidden')
+                footer.classList.remove('hidden')
+              }, 600)
+
         });
   </script>
 </html>
