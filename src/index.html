@@ -132,7 +132,6 @@
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-500"
                   >
-                    <!-- <i class="fas fa-bomb"></i> -->
                     <i class="fas fa-star "></i>
                   </div>
                   <h6 class="text-xl font-semibold">Любимое качество в твоём характере</h6>
@@ -587,18 +586,15 @@
     function handleClick() {
       heart.removeEventListener("click", handleClick);
       heart.classList.toggle("puff_out_animation");
-      // document.querySelector('body').classList.toggle('puff_out_animation');
 
       setTimeout(() => {
         document.getElementById("start_screen").style.display = "none";
         main_element.classList.toggle("hidden");
-        // footer.classList.toggle('hidden');
       }, 600);
     }
 
     var heart = document.querySelector(".heart");
     var main_element = document.querySelector("body main");
-    // var footer = document.querySelector('body footer');
 
     heart.addEventListener("click", handleClick);
   </script>
