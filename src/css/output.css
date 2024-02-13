@@ -1311,6 +1311,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:top-\[2px\] {
+    top: 2px;
+  }
+
   .md\:w-4\/12 {
     width: 33.333333%;
   }
